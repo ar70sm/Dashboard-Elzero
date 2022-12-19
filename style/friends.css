@@ -1,0 +1,94 @@
+:root {
+  --veryLite: #eee;
+  --lite: #888;
+  --mainBlue: #0075ff;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.box {
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* gap: 20px; */
+  padding: 15px;
+}
+.contact a {
+  color: var(--lite);
+  background-color: var(--veryLite);
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin-right: 3px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  transition-duration: 0.3s;
+}
+.contact a:hover {
+  color: white;
+  background-color: var(--mainBlue);
+}
+.up {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.up .img {
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+h3 {
+  font-size: 17px;
+}
+h3 + p {
+  color: var(--lite);
+  font-size: 14px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  border-color: var(--veryLite);
+  border-style: solid;
+  border-width: 1px 0;
+  margin: 20px 0 15px;
+  position: relative;
+}
+.box.vip .info:after {
+  content: "VIP";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  opacity: 0.8;
+  color: bisque;
+  font-weight: 700;
+}
+.down {
+  display: flex;
+  justify-content: space-between;
+}
+.date {
+  color: var(--lite);
+}
+.control button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+.control button:first-child {
+  background-color: var(--mainBlue);
+}

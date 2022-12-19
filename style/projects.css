@@ -1,0 +1,91 @@
+:root {
+  --veryLite: #eee;
+  --lite: #888;
+  --mainBlue:#0075ff;
+}
+
+
+.contents{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(400px,1fr));
+  gap: 20px;
+}
+.box{
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+.date{
+  color: var(--lite);
+  font-size: 13px;
+  text-align: end;
+}
+h3{
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+h3 + p {
+  color: var(--lite);
+  font-size: 13px;
+  margin-bottom: 50px;
+}
+.team{
+display: flex;
+margin-bottom: 15px;
+}
+.team .img{
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: -20px;
+  border: solid white 2px;
+}
+.tags{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px 0;
+  border-color: var(--veryLite);
+  border-style: solid;
+  border-width: 1px 0 ;
+  margin-bottom: 10px;
+}
+.tags p{
+  background: var(--veryLite);
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.foot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.current{
+width: 300px;
+height: 8px;
+background-color: var(--veryLite);
+border-radius: 4px;
+display: flex;
+justify-content: flex-start;
+}
+.current.red{
+  --localColor :#f44336;
+}
+.current.green{
+  --localColor :#22c55e;
+  
+}
+.current.blue{
+  --localColor :#0075ff;
+
+}
+.current div{
+height: 100%;
+background-color: var(--localColor);
+border-radius: 4px;
+}
+.cost{
+  color: var(--lite);
+}

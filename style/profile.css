@@ -1,0 +1,256 @@
+/*
+>>>> media <<<<
+
+// X-Small devices
+@media (max-width: 575px){
+
+// Small devices
+@media (max-width: 767px){
+
+// Medium devices 
+@media (max-width: 991px){
+
+// Large devices
+@media (max-width: 1199px){
+
+// X-Large devices
+@media (max-width: 1399px){
+
+ */
+
+/* start general */
+:root {
+  --veryLite: #eee;
+  --lite: #888;
+  --mainBlue:#0075ff;
+}
+section h3 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+section h4 {
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+section h3 + p,
+section h4 + p {
+  font-size: 15px;
+  color: var(--lite);
+}
+.contents {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+section {
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+@media (max-width: 767px) {
+  .contents {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+/* start blue checkbox */
+[type="checkbox"].blue {
+  display: none;
+}
+[type="checkbox"].blue + label {
+  cursor: pointer;
+  width: 60px;
+  height: 18px;
+  border-radius: 12.5px;
+  background-color: var(--lite);
+  transition-duration: 0.3s;
+  position: relative;
+}
+[type="checkbox"].blue:checked + label {
+  background-color: var(--mainBlue);
+}
+[type="checkbox"].blue + label::after {
+  font-family: FontAwesome;
+  font-weight: 900;
+  font-size: 8px;
+  content: '\f00d';
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 3px solid var(--lite);
+  border-radius: 50%;
+  color: var(--lite);
+  position: absolute;
+  transition-duration: 0.3s;
+  top: 0;
+  left: 0;
+}
+[type="checkbox"].blue:checked + label::after {
+  content: "\f00c";
+  border-color: var(--mainBlue);
+  color: var(--mainBlue);
+  /* transform: translateX(45px); */
+  left: calc(100% - 18px);
+  
+}
+/* end blue checkbox */
+
+
+/* end general */
+
+
+/* start gInfo */
+
+.gInfo{
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8em;
+  font-weight: 700;
+  overflow-x: auto;
+}
+.gInfo .upper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-right: var(--veryLite) 1px solid;
+  flex: 1;
+}
+.gInfo .upper .current{
+  height: 10px;
+  width: 110px;
+  border-radius: 6px;
+  background-color: #ccc;
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+}
+.gInfo .upper .current div{
+  height: 100%;
+  background-color: var(--mainBlue);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.gInfo .upper .stars{
+  color: #f59e0b;
+}
+.gInfo img{
+  width: 150px;
+}
+.gInfo .rating{
+  margin-top: 15px;
+  color: var(--lite);
+  font-size: 13px;
+}
+.gInfo .details{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  color: var(--lite);
+}
+
+.gInfo .details .box{
+  padding: 20px;
+  transition-duration: 0.5s;
+}
+.gInfo .details .box:hover{
+  background-color: #f5f5f5;
+}
+
+.gInfo .details .box:not(:last-child){
+  border-bottom:solid var(--veryLite) 1px ;
+}
+.gInfo .details .box .info{
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.gInfo .details .box .info span{
+  color: black;
+}
+.gInfo .details .box .info div{
+  display: flex;
+}
+@media (max-width: 991px){
+  .gInfo{
+    flex-direction: column;
+  }
+  .gInfo .upper{
+    
+    border-right: none;
+  }
+  .gInfo .details {
+    width: 100%;
+  }
+}
+
+/* end gInfo */
+/* end skills */
+
+.skills .boxes{
+  margin-top: 15px;
+
+}
+.skills .box{
+  display: flex;
+  gap: 10px;
+  padding: 15px 10px;
+  
+}
+.skills .box:not(:last-child){
+  border-bottom:solid #eee 1px ;
+
+  
+}
+.skills .box p{
+  background-color: #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* end skills */
+/* end activities */
+
+.activities .boxes{
+  margin-top: 15px;
+
+}
+.activities .box{
+  display: flex;
+  gap: 10px;
+  padding: 15px 10px;
+  align-items: center;
+  font-weight: 500;
+  transition-duration: 0.5s;
+}
+.activities .box:hover{
+  background-color: #fafafa;
+}
+.activities .box img{
+  height: 60px;
+  
+}
+.activities .box .text{
+  flex: 1;
+  
+}
+.activities .box:not(:last-child){
+  border-bottom:solid #eee 1px ;
+
+  
+}
+
+/* end activities */

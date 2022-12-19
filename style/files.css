@@ -1,0 +1,17 @@
+.contents{
+  display: flex;
+  gap: 15px;
+flex-direction: column;
+width: 100%;
+}
+.sid-box{
+  background-color: red;
+  height: 50px;
+  width: 150px;
+}
+
+.main-contents{
+  height: 500px;
+  width: 100%;
+  background-color: aquamarine;
+}

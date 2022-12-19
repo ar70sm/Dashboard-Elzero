@@ -1,0 +1,68 @@
+:root {
+  --veryLite: #eee;
+  --lite: #888;
+  --mainBlue:#0075ff;
+}
+
+
+.contents{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+  gap: 20px;
+}
+.box{
+  border-radius: 5px;
+  background-color: white;overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
+}
+.person{
+  position: absolute;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: solid white 2px;
+  top: 20px;
+  left: 20px;
+}
+.img{
+width: 100%;
+}
+.img img{
+  width: 100%; 
+}
+h3{
+  padding: 0 20px;
+  font-size: 17px;
+}
+h3 + p{
+  padding: 0 20px;
+  font-size: 13px;
+color: var(--lite);
+flex: 1;
+}
+.foot{
+display: flex;
+justify-content: space-between;
+padding: 18px;
+border-top: 1px var(--veryLite) solid;
+color: var(--lite);
+position: relative;
+margin-top: 5px;
+font-size: 13px;
+}
+button{
+  position: absolute;
+  padding: 5px 10px;
+  background-color: var(--mainBlue);
+  color: white;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 5px;
+}
+

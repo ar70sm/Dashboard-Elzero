@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style/all.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/settings.css" />
+
+    <title>settings</title>
+  </head>
+  <body>
+    <!-- start header -->
+    <aside>
+      <h1>Elzero</h1>
+      <ul>
+        <li>
+          <a href="index.html"
+            ><i class="fa-sharp fa-solid fa-inbox"></i><span>Dashboard</span></a
+          >
+        </li>
+        <li class="active">
+          <a href="settings.html"
+            ><i class="fa-sharp fa-solid fa-gear"></i><span>setting</span></a
+          >
+        </li>
+        <li>
+          <a href="profile.html"
+            ><i class="fa-solid fa-user"></i><span>Profile</span></a
+          >
+        </li>
+        <li>
+          <a href="projects.html"
+            ><i class="fa-solid fa-list-check"></i><span>Projects</span></a
+          >
+        </li>
+        <li>
+          <a href="courses.html"
+            ><i class="fa-solid fa-graduation-cap"></i><span>Courses</span></a
+          >
+        </li>
+        <li>
+          <a href="friends.html"
+            ><i class="fa-solid fa-user-group"></i><span>Friends</span></a
+          >
+        </li>
+        <li>
+          <a href="files.html"><i class="fa-solid fa-file"></i><span>Files</span></a>
+        </li>
+        <li>
+          <a href="plans.html"
+            ><i class="fa-solid fa-credit-card"></i><span>Plans</span></a
+          >
+        </li>
+      </ul>    </aside>
+    <!-- end header -->
+    <!-- start nav -->
+    <header>
+      <div class="container">
+        <form>
+          <input type="search" placeholder="Type a Keyword" />
+        </form>
+        <div class="end">
+          <i class="fa-regular fa-bell active"></i>
+          <img src="imgs/avatar.png" alt="profile" class="profile" />
+        </div>
+      </div>
+    </header>
+    <!-- end nav -->
+    <!-- start main -->
+    <main>
+      <div class="container">
+        <h2>Setting</h2>
+        <div class="contents">
+          <!-- start site -->
+          <section class="site">
+            <div class="upper">
+              <h3>Site Control</h3>
+              <p>Control The Website If There Is Maintenance</p>
+            </div>
+            <div class="up">
+              <div class="text">
+                <h4>Website Control</h4>
+                <p>Open/Close Website And Type The Reason</p>
+              </div>
+              <input
+                id="openSite"
+                type="checkbox"
+                name="openSite"
+                class="blue"
+                checked
+              />
+              <label for="openSite" ></label>
+            </div>
+            <textarea
+              name="reason"
+              id="resone"
+              placeholder="close message content"
+            ></textarea>
+          </section>
+          <!-- end site -->
+          <!-- start gInfo -->
+
+          <section class="gInfo">
+            <div class="upper">
+              <h3>General Info</h3>
+              <p>General Information About Your Account</p>
+            </div>
+            <form>
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" placeholder="first-name" />
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" placeholder="last-name" />
+              <label for="email">Email</label>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  value="ar70sm@gmail.com"
+                  readonly
+                />
+                <a href="#">Change</a>
+              </div>
+            </form>
+          </section>
+
+          <!-- end gInfo -->
+          <!-- start secInfo -->
+          <section class="secInfo">
+            <div class="upper">
+              <h3>Security Info</h3>
+              <p>Security Information About Your Account</p>
+            </div>
+            <div class="boxes">
+              <div class="box">
+                <div class="text">
+                  <h4>Password</h4>
+                  <p>Last Change On 25/10/2021</p>
+                </div>
+                <button class="change">change</button>
+              </div>
+              <div class="box">
+                <div class="text">
+                  <h4>Two-Factor Authentication</h4>
+                  <p>Enable/Disable The Feature</p>
+                </div>
+                <input id="auth" type="checkbox" name="auth" class="blue" />
+                <label for="auth"></label>
+              </div>
+              <div class="box">
+                <div class="text">
+                  <h4>Devices</h4>
+                  <p>Check The Login Devices List</p>
+                </div>
+                <button>device</button>
+              </div>
+            </div>
+          </section>
+          <!-- end secInfo -->
+          <!-- start socInfo -->
+          <section class="socInfo">
+            <div class="upper">
+              <h3>Security Info</h3>
+              <p>Social Media Information</p>
+            </div>
+            <div class="boxes">
+              <div class="tr">
+                <input type="text" name="tr" placeholder="Twitter Username" />
+              </div>
+              <div class="fb">
+                <input type="text" name="fb" placeholder="Facebook Username" />
+              </div>
+              <div class="in">
+                <input type="text" name="in" placeholder="Linkedin Username" />
+              </div>
+              <div class="yt">
+                <input type="text" name="yt" placeholder="Youtube Username" />
+              </div>
+            </div>
+          </section>
+          <!-- end socInfo -->
+          <!-- start Widgets  -->
+          <section class="widgets ">
+            <div class="upper">
+              <h3>Widgets Control</h3>
+              <p>Show/Hide Widgets</p>
+            </div>
+            <div class="boxes">
+              <input type="checkbox" name="cb1" id="cb1">
+              <label for="cb1">Quick Draft</label>
+              <input type="checkbox" name="cb2" id="cb2">
+              <label for="cb2">Yearly Targets</label>
+              <input type="checkbox" name="cb3" id="cb3">
+              <label for="cb3">Tickets Statistics</label>
+              <input type="checkbox" name="cb4" id="cb4">
+              <label for="cb4">Latest News</label>
+              <input type="checkbox" name="cb5" id="cb5">
+              <label for="cb5">Latest Tasks</label>
+              <input type="checkbox" name="cb6" id="cb6">
+              <label for="cb6">Top Search Items</label>
+            </div>
+          </section>
+          <!-- end Widgets  -->
+          <!-- start Backup   -->
+          <section class="backup">
+            <div class="upper">
+              <h3>Backup Manager</h3>
+              <p>Control Backup Time And Location</p>
+            </div>
+            <div class="boxes">
+              <form>
+                  <input type="radio" name="bac1" id="dy">
+                  <label for="dy">Daily</label>
+                  <input type="radio" name="bac1" id="wy">
+                  <label for="wy">Weekly</label>
+                  <input type="radio" name="bac1" id="my">
+                  <label for="my">Monthly</label>
+                
+              </form>
+              <form>
+                <input type="radio" name="bac2" id="mn">
+                <label for="mn">
+                  <i class="fa-solid fa-server"></i>
+                  Megaman 
+                </label>
+                <input type="radio" name="bac2" id="zo">
+                <label for="zo">
+                  <i class="fa-solid fa-server"></i>
+                  Zero 
+                </label>
+                <input type="radio" name="bac2" id="sa">
+                <label for="sa">
+                  <i class="fa-solid fa-server"></i>
+                  Sigma 
+                </label>
+              </form>
+            </div>
+          </section>
+          <!-- end Backup   -->
+        </div>
+      </div>
+    </main>
+    <!-- end main -->
+  </body>
+</html>
