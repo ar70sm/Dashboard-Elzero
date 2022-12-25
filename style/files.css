@@ -1,17 +1,98 @@
+:root {
+  --mainBlue:#0075ff;
+  --liteBlue:#0075ffee;
+}
+
+
 .contents{
   display: flex;
   gap: 15px;
-flex-direction: column;
-width: 100%;
+  flex-direction: row-reverse;
+  width: 100%;
+  align-items: flex-start;
 }
 .sid-box{
-  background-color: red;
-  height: 50px;
-  width: 150px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: white;
+  width: 265px;
+}
+.sid-box >p{
+  font-size: 22px;
+  font-weight: 500;
+}
+.sid-box > div{
+  padding: 10px;
+  border-radius: 10px;
+  border: solid #ccc 1px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sid-box > div p{
+  font-size: 12px;
+}
+.sid-box > div i{
+  padding: 10px;
+}
+.sid-box > div:nth-child(2) i{
+  color:#0075ff ;
+  background-color:#0075ff50 ;
+}
+.sid-box > div:nth-child(3) i{
+  color:#22c55e ;
+  background-color:#22c55e50 ;
+}
+.sid-box > div:nth-child(4) i{
+  color:#f44336 ;
+  background-color:#f4433650 ;
+}
+.sid-box > div:nth-child(5) i{
+  color:#f59e0b ;
+  background-color:#f59e0b50 ;
+}
+.sid-box > div .text{
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sid-box > div .num,
+.sid-box > div .size{
+  color: #888;
+  font-size: 11px;
+}
+.sid-box button {
+  align-self: center;
+  padding: 10px;
+  background-color: var(--mainBlue);
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+.sid-box button:hover {
+  background-color: var(--liteBlue);
+}
+.sid-box button i{
+  margin-right: 15px;
+  /* transform: translateY(3px); */
+}
+.sid-box button:hover i{
+  animation: up 1s infinite ease ;
+}
+
+@keyframes up{
+  50%{
+    transform: translateY(-5px);
+  }
 }
 
 .main-contents{
   height: 500px;
-  width: 100%;
-  background-color: aquamarine;
+  flex: 1;
 }
