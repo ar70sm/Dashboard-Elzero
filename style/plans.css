@@ -1,0 +1,104 @@
+.contents{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+}
+@media (max-width: 991px){
+  .contents{
+    grid-template-columns: 1fr;
+  }
+
+}
+.contents > div:nth-child(1){
+  --globalColor :#22c55e;
+}
+.contents > div:nth-child(2){
+  --globalColor :#0075ff;
+}
+.contents > div:nth-child(3){
+  --globalColor :#f59e0b;
+}
+
+.contents div{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+}
+.contents div .up{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  background-color: var(--globalColor);
+  border: white solid 3px;
+  outline: var(--globalColor) solid 3px;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.contents div .up .name{
+  font-size: 25px;
+}
+.contents div .up .cost{
+  font-size: 35px;
+  position: relative;
+}
+.contents div .up .cost::before{
+  content: "$";
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: calc(100% + 5px);
+}
+.contents div .mid{
+  display: flex;
+  flex-direction: column;
+}
+.contents div .mid p{
+  padding: 15px 30px;
+  position: relative;
+}
+.contents div .mid p:not(:last-child){
+  border-bottom: solid 1px #eee;
+}
+.contents div .mid p::after{
+  content: "\f05a";
+  font-family: FontAwesome ;
+  position: absolute;
+  right: 0;
+  color: #888;
+}
+.contents div .mid p::before{
+  font-family: FontAwesome ;
+  position: absolute;
+  left: 0;
+}
+.contents div .mid p.true::before{
+  content: "\f00c";
+  color: #22c55e;
+}
+.contents div .mid p.false::before{
+  content: "\f00d";
+  color: #f44336;
+}
+.contents div .down button{
+  display: block;
+  align-self: flex-start;
+  padding: 7px 12px;
+  border-radius: 5px;
+  background-color: var(--globalColor);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.contents div .down p{
+  text-align: center;
+  color: #555;
+  display: none;
+}
+.contents div.active .down button{
+  display: none;
+}
+.contents div.active .down p{
+  display: block;
+}

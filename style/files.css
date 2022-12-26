@@ -14,8 +14,8 @@
 .sid-box{
   display: flex;
   flex-direction: column;
-  padding: 25px;
   gap: 10px;
+  padding: 25px;
   border-radius: 10px;
   background-color: white;
   width: 265px;
@@ -93,6 +93,53 @@
 }
 
 .main-contents{
-  height: 500px;
   flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap: 20px;
+}
+.main-contents >div{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.main-contents >div i{
+  color: #666;
+  transition-duration: 0.3s;
+}
+.main-contents >div i:hover{
+  color: var(--mainBlue);
+}
+
+.main-contents >div .img{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+.main-contents >div img{
+  height: 70px;
+  transition-duration: 0.3s;
+}
+.main-contents >div:nth-child(odd) .img:hover img{
+  transform: rotate(7deg);
+}
+.main-contents >div:nth-child(even) .img:hover img{
+  transform: rotate(-7deg);
+}
+.main-contents >div .person{
+  color: #888;
+  font-size: 12px;
+}
+.main-contents >div .info{
+  color: #888;
+  font-size: 12px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  padding-top: 5px;
 }
